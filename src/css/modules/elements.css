@@ -10,13 +10,13 @@
 }
 
 .title--xs {
-  font-weight: 700;
   font-size: calc(var(--size) * 6);
+  font-weight: 700;
 }
 
 .title--2xs {
-  font-weight: 700;
   font-size: calc(var(--size) * 5);
+  font-weight: 700;
 }
 
 .subtitle {
@@ -31,13 +31,13 @@
 }
 
 .subtitle--xs {
-  font-weight: 600;
   font-size: calc(var(--size) * 5);
+  font-weight: 600;
 }
 
 .subtitle--2xs {
-  font-weight: 600;
   font-size: calc(var(--size) * 4.5);
+  font-weight: 600;
 }
 
 .text {
@@ -52,8 +52,8 @@
 }
 
 .text--xs {
-  font-weight: 300;
   font-size: calc(var(--size) * 3);
+  font-weight: 300;
 }
 
 .interactive {
@@ -64,13 +64,13 @@
 }
 
 .interactive--2xl {
-  font-weight: 700;
   font-size: calc(var(--size) * 5);
+  font-weight: 700;
 }
 
 .interactive--xl {
-  font-weight: 700;
   font-size: calc(var(--size) * 4.5);
+  font-weight: 700;
 }
 
 .interactive--lg {
@@ -82,8 +82,8 @@
 }
 
 .interactive--xs {
-  font-weight: 500;
   font-size: calc(var(--size) * 2.5);
+  font-weight: 500;
 }
 
 .img {

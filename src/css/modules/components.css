@@ -26,14 +26,6 @@
       radial-gradient(circle at 20% 30%, var(--grad-primary) 0%, transparent 40%),
       radial-gradient(circle at 80% 70%, var(--grad-secondary) 0%, transparent 40%),
       linear-gradient(135deg, var(--primary-background) 0%, var(--secondary-background) 100%);
-
-    &::before {
-      background-image: radial-gradient(circle at 30% 30%, var(--grad-primary) 0%, transparent 50%);
-    }
-
-    &::after {
-      background-image: radial-gradient(circle at 70% 70%, var(--grad-secondary) 0%, transparent 60%);
-    }
   }
 
   &> :nth-child(even) {
@@ -41,16 +33,6 @@
       radial-gradient(circle at 80% 30%, var(--grad-secondary) 0%, transparent 40%),
       radial-gradient(circle at 20% 70%, var(--grad-primary) 0%, transparent 40%),
       linear-gradient(135deg, var(--secondary-background) 0%, var(--primary-background) 100%);
-
-    &::before {
-      background-image: radial-gradient(circle at 70% 30%, var(--grad-secondary) 0%, transparent 50%);
-      inset: clamp(-20rem, -15vw, -10rem) clamp(-15rem, -10vw, -5rem) auto auto;
-    }
-
-    &::after {
-      background-image: radial-gradient(circle at 30% 70%, var(--grad-primary) 0%, transparent 60%);
-      inset: auto auto clamp(-25rem, -20vw, -15rem) clamp(-20rem, -15vw, -10rem);
-    }
   }
 }
 
@@ -119,7 +101,6 @@
 }
 
 .off-canvas__child {
-  /* ToDo: Validate hamburger menu */
   cursor: initial;
   width: 100%;
   height: 100dvh;
@@ -136,12 +117,14 @@
 
 .hero__title {
   margin: 0;
-  font-weight: 800;
+  font-family: var(--primary-font);
   font-size: clamp(2rem, 5vw, 4rem);
+  font-weight: 800;
 }
 
 .hero__paragraph {
   margin: 0;
+  font-family: var(--secondary-font);
   font-size: clamp(1.125rem, 2.5vw, 1.5rem);
 }
 
@@ -168,18 +151,6 @@
   }
 }
 
-/* ToDo: Validate if the class is used */
-.card--overlay {
-  position: relative;
-  z-index: 1;
-  display: flex;
-  align-items: flex-end;
-  max-width: calc(var(--size) * 106.5);
-  height: calc(var(--size) * 60);
-  background-color: var(--primary-background);
-  text-decoration: none;
-}
-
 .card__image {
   object-fit: cover;
   width: 100%;
@@ -194,15 +165,6 @@
   background-color: var(--secondary-background);
 }
 
-/* Validate the styles */
 .footer {
-  position: relative;
-
-  &>.nav:nth-child(odd) {
-    backdrop-filter: blur(calc(var(--size) * 4));
-  }
-
-  &>.nav:nth-child(even) {
-    background-color: var(--light-shadow);
-  }
+  box-shadow: 0 0 calc(var(--size) * 0.0625) calc(var(--size) * 0.03125) var(--shadow);
 }
