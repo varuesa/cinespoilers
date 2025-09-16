@@ -1,7 +1,9 @@
+import Header from "./ui/components/layouts/Header";
+
 function App() {
 
   return (
-    <h1>Cine Spoilers</h1>
+    <Header />
   );
 }
 
