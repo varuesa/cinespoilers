@@ -166,5 +166,6 @@
 }
 
 .footer {
-  box-shadow: 0 0 calc(var(--size) * 0.0625) calc(var(--size) * 0.03125) var(--shadow);
+  margin-top: auto;
+  box-shadow: 0 0 calc(var(--size) * 0.125) calc(var(--size) * 0.0625) var(--shadow);
 }

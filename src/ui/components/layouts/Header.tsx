@@ -9,6 +9,7 @@ const Header = () => {
               <h2 className="interactive interactive--lg c-primary">Cine SpoilerS</h2>
             </a>
           </div>
+
           <div className="off-canvas off-canvas--right off-canvas--mobile" id="menu">
             <a href="#" className="off-canvas__backdrop"></a>
             <div className="off-canvas__child">
@@ -21,6 +22,7 @@ const Header = () => {
               </ul>
             </div>
           </div>
+
           <div className="f-1 d-flex a-items-center j-content-end g-2">
             <a href="#signin" className="button button--primary interactive interactive--sm">
               💕 Sign In
