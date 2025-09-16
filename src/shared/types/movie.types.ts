@@ -20,11 +20,6 @@ export interface MovieListProps {
   movies: Movie[];
 }
 
-export interface RatingProps {
-  value: number;
-  maxValue?: number;
-}
-
 // Genre mapping type
 export interface GenreMap {
   [key: number]: string;
