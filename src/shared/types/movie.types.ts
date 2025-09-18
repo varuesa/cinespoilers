@@ -11,11 +11,6 @@ export interface Movie {
   releaseDate: string;
 }
 
-// Component props interfaces
-export interface MovieCardProps {
-  movie: Movie;
-}
-
 export interface MovieListProps {
   movies: Movie[];
 }
