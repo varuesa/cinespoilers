@@ -11,10 +11,6 @@ export interface Movie {
   releaseDate: string;
 }
 
-export interface MovieListProps {
-  movies: Movie[];
-}
-
 // Genre mapping type
 export interface GenreMap {
   [key: number]: string;
