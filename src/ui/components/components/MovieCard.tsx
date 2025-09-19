@@ -6,20 +6,20 @@ interface MovieCardProps {
 }
 
 const MovieCard = ({ movie }: MovieCardProps) => {
-  const { title, rating, genre, duration, image, description, showTimes } = movie;
+  const { title, description, duration, genres, poster, showTimes, rating } = movie;
 
   return (
     <article className="card d-flex f-direction-column">
       <div className="p-relative">
         <img
-          src={image}
+          src={poster}
           alt={`${title} movie poster`}
           width="180"
           height="320"
           loading="lazy"
           className="card__image"
         />
-        <span className="badge badge--primary interactive p-absolute t-2 r-2 f-weight-700">{genre}</span>
+        <span className="badge badge--primary interactive p-absolute t-2 r-2 f-weight-700">{genres[0].name}</span>
       </div>
 
       <div className="card__body f-1 g-2">

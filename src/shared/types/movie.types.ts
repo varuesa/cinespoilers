@@ -1,17 +1,16 @@
-// Core Movie interface for our cinema application
 export interface Movie {
   id: number;
   title: string;
-  rating: number;
-  genre: string;
-  duration: string;
-  image: string;
   description: string;
-  showTimes: string[];
+  duration: string;
   releaseDate: string;
+  poster: string;
+  genres: Genre[];
+  showTimes: string[];
+  rating: number;
 }
 
-// Genre mapping type
-export interface GenreMap {
-  [key: number]: string;
+export interface Genre {
+  id: number;
+  name: string;
 }

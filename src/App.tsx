@@ -3,10 +3,10 @@ import Footer from "./ui/components/layouts/Footer";
 import Header from "./ui/components/layouts/Header";
 import Hero from "./ui/components/modules/Hero";
 import MovieGrid from "./ui/components/modules/MovieGrid";
-import { getMoviesFromData } from "./utils/movie.utils";
+import { getMoviesFromMockData } from "./utils/movie.utils";
 
 const App = () => {
-  const movies: Movie[] = getMoviesFromData();
+  const movies: Movie[] = getMoviesFromMockData();
 
   return (
     <>
