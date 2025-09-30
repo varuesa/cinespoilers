@@ -19,7 +19,6 @@ const MovieGrid = ({
   <section className="section" id={id}>
     <div className="container d-flex f-direction-column g-8">
       <h2 className="title c-primary t-align-center">{title}</h2>
-
       {movies.length === 0 ? (
         <p className="text text--lg t-align-center">No movies found 😞</p>
       ) : (
