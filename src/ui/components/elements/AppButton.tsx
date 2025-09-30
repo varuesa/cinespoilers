@@ -22,7 +22,7 @@ const AppButton = ({
   children,
   ...rest
 }: AppButtonProps) => {
-  const variantClass = (variant && variantClassMap[variant]) || '';;
+  const variantClass = (variant && variantClassMap[variant]) || '';
 
   return (
     <button

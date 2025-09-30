@@ -1,12 +1,15 @@
-import type { Movie } from "../../../shared/types/movie.types";
-import Rating from "../widgets/Rating";
+import type { Movie } from '../../../shared/types/movie.types';
+import AppButton from '../elements/AppButton';
+import Rating from '../widgets/Rating';
 
 interface MovieCardProps {
   movie: Movie;
+  isFavorite: boolean;
+  onToggleFavorite?: (movie: Movie) => void;
 }
 
-const MovieCard = ({ movie }: MovieCardProps) => {
-  const { title, description, duration, genres, poster, showTimes, rating } = movie;
+const MovieCard = ({ movie, isFavorite, onToggleFavorite = () => { } }: MovieCardProps) => {
+  const { title, description, duration, poster, genres, showTimes, rating } = movie;
 
   return (
     <article className="card d-flex f-direction-column">
@@ -19,7 +22,15 @@ const MovieCard = ({ movie }: MovieCardProps) => {
           loading="lazy"
           className="card__image"
         />
-        <span className="badge badge--primary interactive p-absolute t-2 r-2 f-weight-700">{genres[0].name}</span>
+        <span className="badge badge--primary interactive p-absolute t-2 l-2 f-weight-700">{genres[0]?.name || 'Unknown'}</span>
+        <AppButton
+          variant="secondary"
+          className="interactive p-absolute t-2 r-2"
+          onClick={() => onToggleFavorite(movie)}
+          aria-label={isFavorite ? `Remove ${title} from favorites` : `Add ${title} to favorites`}
+        >
+          {isFavorite ? "❤️" : "🤍"}
+        </AppButton>
       </div>
 
       <div className="card__body f-1 g-2">
