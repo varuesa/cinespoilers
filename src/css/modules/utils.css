@@ -14,6 +14,10 @@
   right: calc(var(--size) * 2);
 }
 
+.l-2 {
+  left: calc(var(--size) * 2);
+}
+
 .d-flex {
   display: flex;
 }
