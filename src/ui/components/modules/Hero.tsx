@@ -1,7 +1,13 @@
-const Hero = () => {
+import MovieSearch from "../components/MovieSearch";
+
+interface HeroProps {
+  handleSearch: (searchTerm: string) => void;
+}
+
+const Hero = ({ handleSearch }: HeroProps) => {
   return (
     <article className="hero">
-      <div className="container d-flex f-direction-column a-items-center g-4">
+      <div className="container d-flex f-direction-column a-items-center g-5">
         <h1 className="hero__title t-align-center">
           🎥 Explore spoiler-free cinema with <span className="c-primary">AI-Powered insights ✨</span>
         </h1>
@@ -22,6 +28,7 @@ const Hero = () => {
             🔮 Coming Soon
           </a>
         </div>
+        <MovieSearch onSearch={handleSearch} />
       </div>
     </article>
   );

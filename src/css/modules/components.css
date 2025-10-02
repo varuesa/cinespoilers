@@ -178,7 +178,7 @@
 .form__input {
   padding: 0.75em 1.25em;
   border: calc(var(--size) * 0.5) solid var(--primary-color);
-  border-radius: var(--border-radius);
+  border-radius: calc(var(--size) * 2);
   box-shadow:
     0 0 calc(var(--size) * 2) 0 var(--primary-color),
     0 0 calc(var(--size) * 5) 0 var(--secondary-color);

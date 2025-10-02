@@ -14,6 +14,7 @@ const App = () => {
     const stored = localStorage.getItem(FAVORITE_KEY);
     return stored ? JSON.parse(stored) : [];
   });
+  const [searchTerm, setSearchTerm] = useState('');
 
   const handleToggleFavorite = (movie: Movie) => {
     setFavorites(prev => {
@@ -26,15 +27,17 @@ const App = () => {
     });
   };
 
+  const filteredMovies = movies.filter(movie => movie.title.toLowerCase().includes(searchTerm.toLowerCase()));
+
   return (
     <>
       <Header />
       <main className="main">
-        <Hero />
+        <Hero handleSearch={setSearchTerm} />
         <MovieGrid
           id="now-showing"
           title="Now Showing 🎬"
-          movies={movies}
+          movies={filteredMovies}
           favorites={favorites}
           onToggleFavorite={handleToggleFavorite}
         />
